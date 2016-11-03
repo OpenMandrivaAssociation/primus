@@ -1,0 +1,26 @@
+Index: primus-master/primusrun
+===================================================================
+--- primus-master/primusrun
++++ primus-master/primusrun	2014-02-07 19:09:03.459850030 +0100
+@@ -20,17 +20,17 @@
+ 
+ # "Accelerating" libGL
+ # $LIB will be interpreted by the dynamic linker
+-# export PRIMUS_libGLa=${PRIMUS_libGLa:-'/usr/$LIB/nvidia/libGL.so.1'}
++export PRIMUS_libGLa=${PRIMUS_libGLa:-'/usr/lib64/nvidia-current/libGL.so.1:/usr/lib/nvidia-current/libGL.so.1'}
+ 
+ # "Displaying" libGL
+-# export PRIMUS_libGLd=${PRIMUS_libGLd:-'/usr/$LIB/libGL.so.1'}
++export PRIMUS_libGLd=${PRIMUS_libGLd:-'/usr/lib64/libGL.so.1:/usr/lib/libGL.so.1'}
+ 
+ # Directory containing primus libGL
+-PRIMUS_libGL=${PRIMUS_libGL:-$(dirname `readlink -ne $0`)/'$LIB'}
++PRIMUS_libGL='/usr/lib64/primus:/usr/lib/primus'
+ 
+ # On some distributions, e.g. on Ubuntu, libnvidia-tls.so is not available
+ # in default search paths.  Add its path manually after the primus library
+-# PRIMUS_libGL=${PRIMUS_libGL}:/usr/lib/nvidia-current:/usr/lib32/nvidia-current
++PRIMUS_libGL=${PRIMUS_libGL}:/usr/lib64/nvidia-current:/usr/lib/nvidia-current
+ 
+ # Mesa drivers need a few symbols to be visible
+ # export PRIMUS_LOAD_GLOBAL=${PRIMUS_LOAD_GLOBAL:-'libglapi.so.0'}
