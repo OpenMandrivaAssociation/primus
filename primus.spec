@@ -7,7 +7,7 @@
 
 Name:           primus
 Version:        0.2
-Release:        1
+Release:        2
 Summary:        Minimalistic and efficient OpenGL offloading for Bumblebee
 Group:          System/Kernel and hardware
 License:        ISC
@@ -24,7 +24,7 @@ Requires:       %{libname} = %{version}-%{release}
 Requires:       %{name}-bin = %{version}-%{release}
 
 %ifarch x86_64
-Recommends:     lib%{name} = %{version}-%{release}
+Suggests:     lib%{name} = %{version}-%{release}
 %endif
 
 %description
@@ -64,7 +64,7 @@ Group:          System/Kernel and hardware
 Requires:       %{name}
 Requires:       bumblebee-%{driver}
 Obsoletes:      primus-nouveau < 0.1-3.20150328.3
-Provides:       %{name}-bin = %{version}
+Provides:       %{name}-bin = %{version}-%{release}
 
 %description    %{driver}
 primusrun script patched against the %{driver} driver.
