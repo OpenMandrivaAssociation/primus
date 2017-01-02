@@ -16,13 +16,11 @@ Source0:	https://github.com/amonakov/primus/archive/v%{version}/%{name}-%{versio
 Patch1:		primus-0.1-mga-libgl-nvidia.patch
 Patch2:		primus-git-build-with-ldflags.patch
 Patch3:		primus-0.2-mga-libglfork-dl-linking.patch
-
+ExcludeArch:	%{armx}
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(x11)
-
 Requires:	%{libname} = %{EVRD}
 Requires:	%{name}-bin = %{EVRD}
-
 %ifarch x86_64
 Suggests:     lib%{name} = %{EVRD}
 %endif
