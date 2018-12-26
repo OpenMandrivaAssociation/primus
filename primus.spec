@@ -21,7 +21,7 @@ BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(x11)
 Requires:	%{libname} = %{EVRD}
 Requires:	%{name}-bin = %{EVRD}
-%ifarch x86_64
+%ifarch %{x86_64}
 Suggests:     lib%{name} = %{EVRD}
 %endif
 
