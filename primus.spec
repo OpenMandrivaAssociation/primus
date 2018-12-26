@@ -3,11 +3,11 @@
 %define driver nvidia
 
 %define libname %mklibname %{name}
-%global __provides_exclude \\.so
+%define __noautoprov \\.so
 
 Name:		primus
 Version:	0.2
-Release:	3
+Release:	4
 Summary:	Minimalistic and efficient OpenGL offloading for Bumblebee
 Group:		System/Kernel and hardware
 License:	ISC
