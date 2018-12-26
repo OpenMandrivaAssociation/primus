@@ -7,7 +7,7 @@
 
 Name:		primus
 Version:	0.2
-Release:	3
+Release:	4
 Summary:	Minimalistic and efficient OpenGL offloading for Bumblebee
 Group:		System/Kernel and hardware
 License:	ISC
